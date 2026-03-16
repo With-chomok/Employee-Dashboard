@@ -65,7 +65,7 @@ const Analytics = () => {
   data.forEach((row) => {
     const city = row[2];
   
-    const rawSalary = row[5].replace(/[$,]/g, "");
+    const rawSalary = row[4].replace(/[$,]/g, "");
     const salary = Number(rawSalary) || 0;
 
     if (!citySalary[city]) citySalary[city] = 0;
