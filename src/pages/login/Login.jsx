@@ -7,20 +7,21 @@ import { AuthContext } from "../../context/AuthContext"
 
 export default function Login(){
 
- const {login} = useContext(AuthContext)
+ const {login, user} = useContext(AuthContext)
+ console.log(user);
  const navigate = useNavigate()
 
  const [username,setUsername] = useState("")
  const [password,setPassword] = useState("")
 
- const handleLogin = () => {
-
+ const handleLogin = (e) => {
+    e.preventDefault()
   if(username==="testuser" && password==="Test123"){
    login({username})
    navigate("/list")
   }else{
    alert("Invalid Credential")
-  }
+  } 
 
  }
 

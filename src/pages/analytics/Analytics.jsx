@@ -1,11 +1,11 @@
 import React from 'react';
 
-const List = () => {
+const Analytics = () => {
     return (
         <div>
-            list page hare
+            this is analytics
         </div>
     );
 };
 
-export default List;
+export default Analytics;
