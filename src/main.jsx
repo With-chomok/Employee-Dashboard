@@ -10,6 +10,7 @@ import Analytics from "./pages/analytics/Analytics.jsx";
 import { AuthProvider } from "./context/AuthProvider.jsx";
 import PrivateRoutes from "./routes/PrivateRoutes.jsx";
 import Employees from "./pages/employees/Employees.jsx";
+import Details from "./pages/details/Details.jsx";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
         ),
       },
       { path: "/analytics", element: <Analytics /> },
+      {
+        path: "/details/:id" ,element: <Details/> 
+      }
     ],
   },
 ]);
