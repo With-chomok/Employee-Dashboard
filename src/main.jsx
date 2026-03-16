@@ -12,13 +12,19 @@ import PrivateRoutes from "./routes/PrivateRoutes.jsx";
 import Employees from "./pages/employees/Employees.jsx";
 import Details from "./pages/details/Details.jsx";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Layout,
     children: [
-      { index: true, element: <Home /> },
+      {
+        index: true,
+        element: (
+          <PrivateRoutes>
+            <Home />
+          </PrivateRoutes>
+        ),
+      },
       { path: "/login", element: <Login /> },
       {
         path: "/list",
@@ -30,8 +36,9 @@ const router = createBrowserRouter([
       },
       { path: "/analytics", element: <Analytics /> },
       {
-        path: "/details/:id" ,element: <Details/> 
-      }
+        path: "/details/:id",
+        element: <Details />,
+      },
     ],
   },
 ]);
