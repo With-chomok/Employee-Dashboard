@@ -1,10 +1,11 @@
 import "./App.css";
+import Login from "./pages/login/Login";
 
 function Home() {
   return (
     <>
-      <h1>This is Home page and all body here</h1>
-    </>
+      <Login></Login>
+      </>
   );
 }
 
